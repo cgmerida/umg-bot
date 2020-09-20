@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+<!-- Mirrored from umg.edu.gt/plus/soporte/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Sep 2020 00:23:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Recuperación de Contraseña — Soporte — U. Mariano Gálvez</title>
+
+		<link href="css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/jasny.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/default.css" media="screen" rel="stylesheet" type="text/css" />
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="js/assets/html5shiv.js"></script>
+	    <![endif]-->
+	    <script src="js/assets/cssua.js" type="text/javascript"></script>
+	    <script src="js/jquery-2.1.1.min.js"></script>
+	    <script src="js/bootstrap.js"></script>
+	    <script src="js/jasny.js"></script>
+	    <script src="js/validator.js"></script>
+	</head>
+	<body>
+		<a id="main" href="#" data-target="#soporte" data-toggle="modal"></a>
+
+		<p class="logo" >
+			<img alt="U. Mariano Gálvez" src="images/UMGedu.png" />
+		</p>
+
+		<div id="soporte" class="fade modal" role="dialog" aria-labelledby="window" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog">
+				<form action="https://umg.edu.gt/plus/soporte/index.php" enctype="multipart/form-data" method="post" role="form" data-disable="0" data-toggle="validator">
+					<div class="modal-content">
+						<div class="modal-header">
+															<img src="images/umg.png">
+								<h4 class="modal-title">Recuperación de Contraseña</h4>
+		            				            	</div>
+		            	<div class="modal-body">
+		            				            			<div class="view show" id="status0">
+		            								            		<fieldset>
+				            			<div class="form-group row">
+				            				<div class="bottom0 col-sm-12 col-xs-12 form-group margin0">
+				            					<select name="soy" class="form-control">
+				            						<option value="stu" selected>Soy Estudiante</option>
+				            						<option value="cat">Soy Catedrático</option>
+				            					</select>
+				            				</div>
+				            			</div>
+				            			<div id="soy-stu" class="form-group row">
+				            				<div class="col-sm-4 col-xs-12 form-group margin0">
+				            					<h5>
+				            						Carné <small>(ej. 0900-20-12345)</small>
+				            					</h5>
+				            				</div>
+				            				<div class="col-sm-2 col-xs-4 form-group margin0">
+				            					<input name="facultad"  type="text" class="form-control" pattern="^\s?\d+\s?$" maxlength="4" placeholder="0000" required data-minlength="3" data-error="Este dato es requerido" />
+				            				</div>
+				            				<div class="col-sm-2 col-xs-3 form-group margin0">
+				            					<input name="anio"  type="text" class="form-control" pattern="^\s?\d+\s?$" maxlength="2" placeholder="00" required data-minlength="2" data-error="Dato requerido" />
+				            				</div>
+				            				<div class="col-sm-4 col-xs-5 form-group margin0">
+				            					<input name="carnet"  type="text" class="form-control" pattern="^\s?\d+\s?$" maxlength="5" placeholder="00000" required data-minlength="1" data-error="Este dato es requerido" />
+				            				</div>
+				            			</div>
+				            			<div id="soy-cat" class="form-group row hidden">
+				            				<div class="col-sm-12">
+				            					<input name="codcat"  type="text" class="form-control" pattern="^\s?\d+\s?$" maxlength="5" placeholder="Código de Catedrático" disabled required data-minlength="1" data-error="Escriba su código de catedrático" />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            			</div>
+				            			<script type="text/javascript">
+				            				$(document).on("change", "[name='soy']", function() {
+				            					$("#soy-stu").addClass("hidden");
+				            					$("#soy-stu").find("input").attr("disabled", true);
+				            					
+				            					$("#soy-cat").addClass("hidden");
+				            					$("#soy-cat").find("input").attr("disabled", true);
+
+				            					$("#soy-" + $(this).val()).removeClass("hidden");
+				            					$("#soy-" + $(this).val()).find("input").removeAttr("disabled");
+
+				            					if ($(this).val() == "cat") 
+				            						$("[name='NIT']").attr("required", true);
+				            					else
+				            						$("[name='NIT']").removeAttr("required");
+				            				});
+				            			</script>
+				            			<div class="form-group row">
+				            				<div class="col-sm-6 col-xs-12 form-group margin0">
+				            					<input name="nombre"  type="text" class="form-control" maxlength="32" pattern="^\D+$" placeholder="Nombre Completo" required data-minlength="2" data-error="Escriba su nombre completo" />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            				<div class="bottom0 col-sm-6 col-xs-12 form-group margin0">
+				            					<input name="apellidos"  type="text" class="form-control" maxlength="32" pattern="^\D+$" placeholder="Apellidos" required data-minlength="3" data-error="Escriba sus apellidos" />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            			</div>
+				            			<div class="form-group row">
+				            				<div class="col-sm-6 col-xs-12 form-group margin0">
+				            					<input name="DPI"  type="text" class="form-control" maxlength="15" pattern="^[0-9]{4}\s?[0-9]{5}\s?[0-9]{4}$" placeholder="DPI" required data-minlength="13" data-error="Escriba un número de DPI válido" data-remote-error="El número de DPI no existe" data-remote="validator.php?dpi=gt"  />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            				<div class="col-sm-6 col-xs-12 form-group margin0 bottom0">
+				            					<input name="NIT"  type="text" class="form-control" maxlength="16" pattern="^[0-9]+(-?[0-9kK])?$" placeholder="NIT" data-minlength="5" data-error="Escriba un número de NIT válido" data-remote-error="El número de NIT no existe" data-remote="validator.php?nit=gt"  />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            			</div>
+				            			<div class="form-group row">
+				            				<div class="col-xs-12 form-group margin0">
+					            				<span class="btn btn-block btn-default btn-file file-input">
+					            				    <em>Adjuntar DPI (max. 2MB)</em>
+					            				    <input name="constancias[DPI]" type="file" accept="image/jpeg" pattern="\.(jp(e)?g|JP(E)?G)$" required data-error="La imagen debe ser JPG" data-label="DPI" />
+					            				</span>
+					            			</div>
+				            			</div>
+				            			<script>
+				            				$(document).on("change", ".btn-file :file", function() {
+				            				  	var input = $(this),
+				            				    
+				            				    numFiles = input.get(0).files ? input.get(0).files.length : 1,
+				            					label = input.val().replace(/\\/g, '../../index.html').replace(/.*\//, '');
+				            				  
+				            				  	if (label)
+				            				  		$(this).parent().find("em").text($(this).data("label") + " (" + label + ")");
+				            				  	else
+				            				  		$(this).parent().find("em").text("Agregar " + $(this).data("label"));
+
+				            				  	input.trigger('fileselect', [numFiles, label]);
+				            				});
+
+				            				$(document).ready( function() {
+				            				    $(".btn-file :file").on("fileselect", function(event, numFiles, label) {
+				            				        
+				            				        var input = $(this).parents('.input-group').find(':text'),
+				            				        
+				            				        log = numFiles > 1 ? numFiles + ' archivos seleccionados' : label;
+				            				        
+				            				        if ( input.length )
+				            				            input.val(log);
+				            				    });
+				            				});
+				            			</script>
+				            			<div class="form-group row">
+				            				<div class="bottom0 col-xs-12 form-group margin0"> 
+				            					<input name="correo_electronico[0]"  type="email" class="form-control" maxlength="48" placeholder="E-mail personal (a esta dirección se le enviará la respuesta)" required data-minlength="6" data-error="Escriba una dirección de correo válida" data-remote-error="La dirección de correo no existe o no puede utilizarse" data-remote="validator.php?mx=true&blocked-mx=umg.edu.gt,miumg.edu.gt" />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            			</div>
+				            			<div class="form-group row">
+				            				<div class="bottom0 col-xs-12 form-group margin0">
+				            					<input name="correo_electronico[1]"  type="email" class="form-control" maxlength="48" placeholder="Otro e-mail personal" data-minlength="6" data-error="Escriba una dirección de correo válida" data-remote-error="La dirección de correo no existe o no puede utilizarse" data-remote="validator.php?mx=true&blocked-mx=umg.edu.gt,miumg.edu.gt" />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            			</div>
+				            			<div class="bottom0 form-group row">
+				            				<div class="col-sm-6 col-xs-12 form-group margin0">
+				            					<input name="telefono[0]"  type="text" class="form-control" maxlength="12" pattern="^[0-9\-\s,]{8,12}$" placeholder="Teléfono Móvil" required data-minlength="8" data-error="Escriba una número de teléfono válido" data-remote-error="El número de teléfono no existe" data-remote="validator.php?telephone=GT" />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            				<div class="bottom0 col-sm-6 col-xs-12 form-group margin0">
+				            					<input name="telefono[1]"  type="text" class="form-control" maxlength="12" pattern="^[0-9\-\s,]{8,12}$" placeholder="Otro Teléfono Móvil" data-minlength="8" data-error="Escriba una número de teléfono válido" data-remote-error="El número de teléfono no existe" data-remote="validator.php?telephone=GT" />
+				            					<div class="help-block with-errors"></div>
+				            				</div>
+				            			</div>
+				            			
+				            		</fieldset>
+				            	</div>
+		            				            	</div>
+		            				            	<div class="modal-footer">
+			            		<input type="submit" class="btn btn-primary disabled form-control" value="Enviar Solicitud" />
+			            	</div>
+		            						</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.setTimeout(function() {
+			$("#main").click();
+
+			$("[type='submit']").removeAttr("disabled");
+		}, 300);
+
+		$("form input, form selected").on("focus", function() {
+			$("[type='submit']").removeAttr("disabled");
+		});
+
+		$("form").on("submit", function() {
+			$("[type='submit']").attr("disabled", true);
+		});
+
+			</script>
+
+<!-- Mirrored from umg.edu.gt/plus/soporte/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Sep 2020 00:23:37 GMT -->
+</html>

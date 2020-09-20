@@ -1,0 +1,178 @@
+/**
+ * @author  Juan Manuel Lemus <jlemus@umg.edu.gt>
+ * @version 0.0.5
+ */
+
+.modal-header img {
+	display: block;
+	margin: 0 auto 15px;
+	width: 125px;
+}
+
+.modal-title {
+	text-align: center;
+}
+
+/** 
+ * @group file-input 
+ * @reff http://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3/
+ */
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-file em {
+	font-style: normal;
+}
+
+.btn-file input[type=file] {
+	background: red;
+	cursor: inherit;
+	display: block;
+	font-size: 100px;
+	min-height: 100%;
+	min-width: 100%;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 0;
+
+	filter:alpha(opacity=0);
+}
+
+input[readonly] {
+	background-color: white !important;
+	cursor: text !important;
+}
+
+.has-error .btn-file, .has-error .fileinput-preview {
+	border-color: #b94a48;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 175px;
+}
+
+.fileinput {
+	cursor: pointer;
+}
+
+.fileinput .default-avatar {
+	opacity: 1;
+}
+
+.fileinput:hover .default-avatar {
+	opacity: 0.8;
+}
+
+.fileinput .thumbnail>img {
+	width: 100%;
+}
+
+/** @end group */
+
+/** @group form */
+label {
+	font-weight: normal;
+}
+
+.block {
+	display: block;
+}
+
+.bottom0 {
+	margin-bottom: 0 !important;
+}
+
+.bottom1 {
+	margin-bottom: 5px;
+}
+
+.bottom2 {
+	margin-bottom: 10px;
+}
+
+.help-block {
+	display: none;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.has-error .help-block {
+	display: block;
+	margin-top: 5px;
+}
+
+.margin0 {
+	margin: 0;
+}
+
+.modal-header {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.modal-title {
+	margin-top: 6px;
+}
+
+.modal-body .row .form-group {
+	padding-right: 0px;
+}
+
+.modal-body .row .form-group:last-child {
+	padding-right: 15px;
+}
+
+	@media screen and (max-width: 768px) {
+
+		.modal-body .row .form-group.col-xs-12
+		, .modal-body .row .form-group.as-xs-12 {
+			margin-bottom: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+
+			
+	}
+
+.top0 {
+	margin-top: 0px;
+}
+
+.top1 {
+	margin-top: 5px;
+}
+
+.top2 {
+	margin-top: 10px;
+}
+
+.top4 {
+	margin-top: 20px;
+}
+/** @end group */
+
+/** @group page */
+.logo {
+	margin-top: 50px;
+	text-align: center;
+}
+
+	@media screen and (max-width: 520px) {
+
+		.logo img {
+			width: 50%;
+		}
+	}
+/** @end group */
